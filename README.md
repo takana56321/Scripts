@@ -18,7 +18,7 @@
  **リポジトリをクローンする**:
 
    ```
-   git clone https://github.com/takana56321/Script.git
+  $ git clone https://github.com/takana56321/Script.git
    ```
 
 ## 環境
@@ -53,30 +53,30 @@ $ ./laravel_setup.sh プロジェクト名 データベース名
 このスクリプトは、指定されたプロジェクト名でLaravelプロジェクトを作成し、データベースの設定を行います。さらに、Laravel BreezeとBreezejpパッケージをインストールして設定します。
 
 #### バージョン変更
-Laravelのバージョンを変更したい場合は、
-スクリプト内の12行目を任意のバージョンに変更してください。
+>> Laravelのバージョンを変更したい場合は、
+>> スクリプト内の12行目を任意のバージョンに変更してください。
 ```
  composer create-project "laravel/laravel=9.*" "$PROJECT_NAME"
 ```
 
 #### MySQLのパス変更
-21行目はXAMPPのMySQLに移動するコマンドです。使用者のMySQLのbinディレクトリに合わせて書き換えてください。
+>> 21行目はXAMPPのMySQLに移動するコマンドです。使用者のMySQLのbinディレクトリに合わせて書き換えてください。
 ```
  cd /c/xampp/mysql/bin || exit
 ```
 #### MySQLのユーザーとパスワード変更
-以下の行を使用者の環境に合わせて変更してください。
+>> 以下の行を使用者の環境に合わせて変更してください。
 
 24行目:
 ```
- echo "CREATE DATABASE $DATABASE_NAME;" | ./mysql -u root -p
+ echo "CREATE DATABASE $DATABASE_NAME;" | ./mysql -u root -p"パスワード"
 ```
 32行目:
 ```
- sed -i "s/DB_USERNAME=.*/DB_USERNAME=root/" .env
+ sed -i "s/DB_USERNAME=.*/DB_USERNAME="ユーザーネーム"/" .env
 ```
 33行目:
 ```
- sed -i "s/DB_PASSWORD=.*/DB_PASSWORD=/" .env
+ sed -i "s/DB_PASSWORD=.*/DB_PASSWORD="パスワード"/" .env
 ```
 このREADMEに従ってスクリプトを実行することで、Docker環境およびLaravelプロジェクトのセットアップが簡単に行えます。
