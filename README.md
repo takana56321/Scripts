@@ -3,8 +3,8 @@
 
 このプロジェクトは、Dockerを使用してLaravel環境を構築し、簡単に開発環境を整えることを目的としています。以下のスクリプトを使用して、必要なセットアップを自動化しています:
 
-- `docker_setup_project.sh`: Docker環境のセットアップ
-- `setup_laravel_project.sh`: Laravelプロジェクトのセットアップ
+- `docker_setup.sh`: Docker環境のセットアップ
+- `laravel_setup_laravel.sh`: Laravelプロジェクトのセットアップ
 
 ## 使用方法
 
