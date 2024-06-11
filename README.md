@@ -57,7 +57,7 @@ Laravelのバージョンを変更したい場合は、
 スクリプト内の12行目を任意のバージョンに変更してください。<span style="color: red; ">赤文字</span>
 | 変更行数 | デフォルト | 変更場所 |
 | :---: | :---: | :---: |
-| 12行目 | 'composer create-project "laravel/laravel=9.*" "$PROJECT_NAME"' | 'composer create-project <span style="color: red; ">"laravel/laravel=9.*"</span> "$PROJECT_NAME"' |
+| 12行目 | `composer create-project "laravel/laravel=9.*" "$PROJECT_NAME"` | `composer create-project <span style="color: red; ">"laravel/laravel=9.*"</span> "$PROJECT_NAME"` |
 
 ### MySQLのパス変更
 21行目はXAMPPのMySQLに移動するコマンドです。使用者のMySQLのbinディレクトリに合わせて書き換えてください。
