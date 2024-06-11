@@ -49,23 +49,23 @@ laravel_setup.sh スクリプトを実行して、Laravelプロジェクトを�
 $ ./laravel_setup.sh プロジェクト名 データベース名
 ```
 
-#### スクリプト内容
-このスクリプトは、指定されたプロジェクト名でLaravelプロジェクトを作成し、データベースの設定を行います。さらに、Laravel BreezeとBreezejpパッケージをインストールして設定します。
+#### laravel_setup.shスクリプト内容
+このスクリプトは、指定されたプロジェクト名でLaravelプロジェクトを作成し、データベースの設定を行います。さらに、Laravel BreezeとBreezejpパッケージをインストールして設定しています。
 
-#### バージョン変更
->> Laravelのバージョンを変更したい場合は、
->> スクリプト内の12行目を任意のバージョンに変更してください。
-```
- composer create-project "laravel/laravel=9.*" "$PROJECT_NAME"
-```
+### バージョン変更
+Laravelのバージョンを変更したい場合は、
+スクリプト内の12行目を任意のバージョンに変更してください。<span style="color: red; ">赤文字</span>
+| 変更行数 | デフォルト | 変更場所 |
+| :---: | :---: | :---: |
+| 12行目 | 'composer create-project "laravel/laravel=9.*" "$PROJECT_NAME"' | 'composer create-project <span style="color: red; ">"laravel/laravel=9.*"</span> "$PROJECT_NAME"' |
 
-#### MySQLのパス変更
->> 21行目はXAMPPのMySQLに移動するコマンドです。使用者のMySQLのbinディレクトリに合わせて書き換えてください。
+### MySQLのパス変更
+21行目はXAMPPのMySQLに移動するコマンドです。使用者のMySQLのbinディレクトリに合わせて書き換えてください。
 ```
  cd /c/xampp/mysql/bin || exit
 ```
-#### MySQLのユーザーとパスワード変更
->> 以下の行を使用者の環境に合わせて変更してください。
+### MySQLのユーザーとパスワード変更
+以下の行を使用者の環境に合わせて変更してください。
 
 24行目:
 ```
@@ -80,3 +80,15 @@ $ ./laravel_setup.sh プロジェクト名 データベース名
  sed -i "s/DB_PASSWORD=.*/DB_PASSWORD="パスワード"/" .env
 ```
 このREADMEに従ってスクリプトを実行することで、Docker環境およびLaravelプロジェクトのセットアップが簡単に行えます。
+
+
+| バージョン変更 | TH 中央寄せ | TH 左寄せ |
+| :---: | :---: | :--- |
+| 12行目 | 'composer create-project "laravel/laravel=9.*" "$PROJECT_NAME"' |
+| TD | TD | TD |
+
+
+| TH 左寄せ | TH 中央寄せ | TH 右寄せ |
+| :--- | :---: | ---: |
+| TD | TD | TD |
+| TD | TD | TD |
