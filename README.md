@@ -22,9 +22,9 @@
    ```
 
 ## 環境
-Docker 3.8
-MySQL 8.0.29
-Laravel 9
+- Docker 3.8
+- MySQL 8.0.29
+- Laravel 9
 ## 環境構築手順
 ### Docker環境のセットアップ
 
@@ -33,7 +33,7 @@ docker_setup.sh スクリプトを実行して、Docker環境をセットアッ�
 コードを実行する
 
 ```
- ./docker_setup.sh フォルダ名
+$ ./docker_setup.sh フォルダ名
 ```
 #### ./docker_setup.shスクリプト内容
 このスクリプトは、指定されたフォルダを作成し、Docker Compose設定ファイルを作成します。また、必要なディレクトリとファイルも生成されます。
@@ -46,7 +46,7 @@ laravel_setup.sh スクリプトを実行して、Laravelプロジェクトを�
 
 コードを実行する
 ```
- ./laravel_setup.sh プロジェクト名 データベース名
+$ ./laravel_setup.sh プロジェクト名 データベース名
 ```
 
 #### スクリプト内容
