@@ -12,9 +12,9 @@ docker_setup.sh スクリプトを実行して、Docker環境をセットアッ�
 
 コードをコピーする
 
-'''bash
+```
  ./docker_setup.sh フォルダ名
-'''
+```
 スクリプト内容
 このスクリプトは、指定されたフォルダを作成し、Docker Compose設定ファイルを作成します。また、必要なディレクトリとファイルも生成されます。
 デフォルトのポート設定
@@ -23,9 +23,9 @@ Laravelプロジェクトのセットアップ
 laravel_setup.sh スクリプトを実行して、Laravelプロジェクトをセットアップします。
 
 コードをコピーする
-'''bash
+```
  ./laravel_setup.sh プロジェクト名 データベース名
-'''
+```
 スクリプト内容
 このスクリプトは、指定されたプロジェクト名でLaravelプロジェクトを作成し、データベースの設定を行います。さらに、Laravel BreezeとBreezejpパッケージをインストールして設定します。
 
@@ -34,36 +34,36 @@ Laravelのバージョンを変更したい場合は、スクリプト内の12�
 
 
 コードをコピーする
-'''bash
+```
  composer create-project "laravel/laravel=9.*" "$PROJECT_NAME"
-'''
+```
 MySQLのパス変更
 21行目はXAMPPのMySQLに移動するコマンドです。使用者のMySQLのbinディレクトリに合わせて書き換えてください。
 
 コードをコピーする
-'''bash
+```
  cd /c/xampp/mysql/bin || exit
-'''
+```
 MySQLのユーザーとパスワード変更
 以下の行を使用者の環境に合わせて変更してください。
 
 24行目:
 
 コードをコピーする
-'''bash
+```
  echo "CREATE DATABASE $DATABASE_NAME;" | ./mysql -u root -p
-'''
+```
 32行目:
 
 コードをコピーする
-'''bash
+```
  sed -i "s/DB_USERNAME=.*/DB_USERNAME=root/" .env
-'''
+```
 33行目:
 コードをコピーする
-'''bash
+```
  sed -i "s/DB_PASSWORD=.*/DB_PASSWORD=/" .env
-'''
+```
 このREADMEに従ってスクリプトを実行することで、Docker環境およびLaravelプロジェクトのセットアップが簡単に行えます。
 
 
