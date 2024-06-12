@@ -68,15 +68,15 @@ Laravelのバージョンを変更したい場合は、
 
 | 変更行数 | デフォルト | 変更場所 |
 | :---: | :---: | :---: |
-| 21行目 | > `cd /c/xampp/mysql/bin `||` exit` |  |
-| 21行目 | `cd /c/xampp/mysql/bin /|| exit` | `/c/xampp/mysql/bin` |
+| 21行目 | cd /c/xampp/mysql/bin || exit | /c/xampp/mysql/bin |
+| 21行目 | `cd /c/xampp/mysql/bin || exit` | `/c/xampp/mysql/bin` |
 
 ### MySQLのユーザーとパスワード変更
 以下の行を使用者の環境に合わせて変更してください。
 
 | 変更行数 | デフォルト | 変更場所 |
 | :---: | :---: | :---: |
-| 24行目 | `echo "CREATE DATABASE $DATABASE_NAME;" | ./mysql -u root -p` | `./mysql -u "ユーザーネーム" -p"パスワード"` |
+| 24行目 | echo "CREATE DATABASE $DATABASE_NAME;" | ./mysql -u root -p | ./mysql -u "ユーザーネーム" -p"パスワード" |
 | 31行目 | `sed -i "s/DB_USERNAME=.*/DB_USERNAME=root/" .env` | `DB_USERNAME="ユーザーネーム"` |
 | 32行目 | `sed -i "s/DB_PASSWORD=.*/DB_PASSWORD=/" .env` | `.*/DB_PASSWORD="パスワード"` |
 
