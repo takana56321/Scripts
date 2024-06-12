@@ -58,15 +58,17 @@ $ ./laravel_setup.sh プロジェクト名 データベース名
 ### Laravelバージョン変更
 Laravelのバージョンを変更したい場合は、
 スクリプト内の12行目を任意のバージョンに変更してください。
+
 | 変更行数 | デフォルト | 変更場所 |
 | :---: | :---: | :---: |
 | 12行目 | `composer create-project "laravel/laravel=9.*" "$PROJECT_NAME"` | `"laravel/laravel=9.*"` |
 
 ### MySQLのパス変更
 21行目はXAMPPのMySQLに移動するコマンドです。使用者のMySQLのbinディレクトリに合わせて書き換えてください。
+
 | 変更行数 | デフォルト | 変更場所 |
 | :---: | :---: | :---: |
-| 21行目 | `cd /c/xampp/mysql/bin || exit` |  |
+| 21行目 | `cd /c/xampp/mysql/bin `||` exit` |  |
 | 21行目 | `cd /c/xampp/mysql/bin /|| exit` | `/c/xampp/mysql/bin` |
 
 ### MySQLのユーザーとパスワード変更
@@ -74,7 +76,7 @@ Laravelのバージョンを変更したい場合は、
 
 | 変更行数 | デフォルト | 変更場所 |
 | :---: | :---: | :---: |
-| 24行目 | `echo "CREATE DATABASE $DATABASE_NAME;" /| ./mysql -u root -p` | `./mysql -u "ユーザーネーム" -p"パスワード"` |
+| 24行目 | `echo "CREATE DATABASE $DATABASE_NAME;" | ./mysql -u root -p` | `./mysql -u "ユーザーネーム" -p"パスワード"` |
 | 31行目 | `sed -i "s/DB_USERNAME=.*/DB_USERNAME=root/" .env` | `DB_USERNAME="ユーザーネーム"` |
 | 32行目 | `sed -i "s/DB_PASSWORD=.*/DB_PASSWORD=/" .env` | `.*/DB_PASSWORD="パスワード"` |
 
