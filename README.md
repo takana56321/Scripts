@@ -67,7 +67,7 @@ Laravelのバージョンを変更したい場合は、
 | 変更行数 | デフォルト | 変更場所 |
 | :---: | :---: | :---: |
 | 21行目 | `cd /c/xampp/mysql/bin || exit` |  |
-| 21行目 | `cd /c/xampp/mysql/bin /|/| exit` | `/c/xampp/mysql/bin` |
+| 21行目 | `cd /c/xampp/mysql/bin /|| exit` | `/c/xampp/mysql/bin` |
 
 ### MySQLのユーザーとパスワード変更
 以下の行を使用者の環境に合わせて変更してください。
