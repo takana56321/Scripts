@@ -66,7 +66,7 @@ Laravelのバージョンを変更したい場合は、
 21行目はXAMPPのMySQLに移動するコマンドです。使用者のMySQLのbinディレクトリに合わせて書き換えてください。
 | 変更行数 | デフォルト | 変更場所 |
 | :---: | :---: | :---: |
-| 21行目 | `cd /c/xampp/mysql/bin || exit` | `/c/xampp/mysql/bin` |
+| 21行目 | `cd /c/xampp/mysql/bin || exit` |  |
 | 21行目 | `cd /c/xampp/mysql/bin || exit` | `/c/xampp/mysql/bin` |
 
 ### MySQLのユーザーとパスワード変更
