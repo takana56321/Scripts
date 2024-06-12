@@ -53,7 +53,7 @@ $ ./laravel_setup.sh プロジェクト名 データベース名
 このスクリプトは、指定されたプロジェクト名でLaravelプロジェクトを作成し、データベースの設定を行います。さらに、Laravel BreezeとBreezejpパッケージをインストールして設定しています。
 
 
-## laravel_setup.shスクリプトの使用者の環境に合わせ変更する箇所
+## laravel_setup.shの使用者の環境に合わせ変更する箇所
 
 ### Laravelバージョン変更
 Laravelのバージョンを変更したい場合は、
