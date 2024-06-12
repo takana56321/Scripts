@@ -57,7 +57,7 @@ $ ./laravel_setup.sh プロジェクト名 データベース名
 
 ### バージョン変更
 Laravelのバージョンを変更したい場合は、
-スクリプト内の12行目を任意のバージョンに変更してください。<span style="color: red; ">赤文字</span>
+スクリプト内の12行目を任意のバージョンに変更してください。
 | 変更行数 | デフォルト | 変更場所 |
 | :---: | :---: | :---: |
 | 12行目 | `composer create-project "laravel/laravel=9.*" "$PROJECT_NAME"` | `"laravel/laravel=9.*"` |
