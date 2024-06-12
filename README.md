@@ -57,38 +57,23 @@ Laravelのバージョンを変更したい場合は、
 スクリプト内の12行目を任意のバージョンに変更してください。<span style="color: red; ">赤文字</span>
 | 変更行数 | デフォルト | 変更場所 |
 | :---: | :---: | :---: |
-| 12行目 | `composer create-project "laravel/laravel=9.*" "$PROJECT_NAME"` | `composer create-project <span style="color: red; ">"laravel/laravel=9.*"</span> "$PROJECT_NAME"` |
+| 12行目 | `composer create-project "laravel/laravel=9.*" "$PROJECT_NAME"` | `"laravel/laravel=9.*"` |
 
 ### MySQLのパス変更
 21行目はXAMPPのMySQLに移動するコマンドです。使用者のMySQLのbinディレクトリに合わせて書き換えてください。
+| 変更行数 | デフォルト | 変更場所 |
+| :---: | :---: | :---: |
+| 21行目 | `cd /c/xampp/mysql/bin || exit` | `/c/xampp/mysql/bin` |
 ```
  cd /c/xampp/mysql/bin || exit
 ```
 ### MySQLのユーザーとパスワード変更
 以下の行を使用者の環境に合わせて変更してください。
 
-24行目:
-```
- echo "CREATE DATABASE $DATABASE_NAME;" | ./mysql -u root -p"パスワード"
-```
-32行目:
-```
- sed -i "s/DB_USERNAME=.*/DB_USERNAME="ユーザーネーム"/" .env
-```
-33行目:
-```
- sed -i "s/DB_PASSWORD=.*/DB_PASSWORD="パスワード"/" .env
-```
+| 変更行数 | デフォルト | 変更場所 |
+| :---: | :---: | :---: |
+| 24行目 | `echo "CREATE DATABASE $DATABASE_NAME;" | ./mysql -u root -p` | `./mysql -u "ユーザネーム" -p"パスワード"` |
+| 31行目 | `sed -i "s/DB_USERNAME=.*/DB_USERNAME=root/" .env` | `DB_USERNAME="ユーザーネーム"` |
+| 32行目 | `sed -i "s/DB_PASSWORD=.*/DB_PASSWORD=/" .env` | `.*/DB_PASSWORD="パスワード"` |
+
 このREADMEに従ってスクリプトを実行することで、Docker環境およびLaravelプロジェクトのセットアップが簡単に行えます。
-
-
-| バージョン変更 | TH 中央寄せ | TH 左寄せ |
-| :---: | :---: | :--- |
-| 12行目 | 'composer create-project "laravel/laravel=9.*" "$PROJECT_NAME"' |
-| TD | TD | TD |
-
-
-| TH 左寄せ | TH 中央寄せ | TH 右寄せ |
-| :--- | :---: | ---: |
-| TD | TD | TD |
-| TD | TD | TD |
